@@ -1,6 +1,7 @@
 import React from "react"
 import MaxWidthWrapper from "./components/MaxWidthWrapper"
 import Heading from "./components/Heading"
+import { Check } from "lucide-react"
 
 const Page = () => {
   return (
@@ -17,6 +18,27 @@ const Page = () => {
                 </span>
               </Heading>
             </div>
+
+            <p className="text-base/7 text-gray-600 max-w-prose text-center text-pretty">
+              Pingly is the easiest way to monitor you SaaS. Get instant
+              notifications for{" "}
+              <span className="font-semibold text-gray-700">
+                sales, new users, or any other event
+              </span>{" "}
+              sent directly to your Discord
+            </p>
+            <ul className="space-y-2 text-base/7 text-gray-600 text-left flex flex-col items-start ">
+              {[
+                "Real-time Discord Notifications",
+                "Track any events",
+                "No Code Required",
+              ].map((item, index) => (
+                <li key={index} className="flex gap-1.5 items-center text-left">
+                  <Check className="size-5 shrink-0 text-brand-700" />
+                  {item}
+                </li>
+              ))}
+            </ul>
           </div>
         </MaxWidthWrapper>
       </section>
